@@ -1,6 +1,8 @@
 require('dotenv').config();
 
-let gifHolder = document.querySelector('.gif')
+// let gifHolder = document.querySelector('.gif')
+
+// key = env.
 
 let data;
 
@@ -12,9 +14,10 @@ async function getImage(query) {
         const jsonData = await response.json();
         data = jsonData.data;
         for (let i = 0; i < data.length; i++) {
-            const img = document.createElement('img');
-            img.src = data[i].images.fixed_height.url;
-            gifHolder.appendChild(img);
+            // const img = document.createElement('img');
+            // img.src = data[i].images.fixed_height.url;
+            // gifHolder.appendChild(img);
+            console.log(data[i].embed_url)
         }
     } catch (error) {
         console.error("You've had the following error: \n", error);
